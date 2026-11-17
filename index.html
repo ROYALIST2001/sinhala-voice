@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a56db">
+  <meta name="description" content="Lend your voice to Sinhala keyword research. A few words from you can help technology understand more of us.">
+  <title>Sinhala Voice Research · Lend your voice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#1a56db;--primary-dark:#1445b3;--success:#057a55;--warning:#e3a008;--danger:#e02424;--bg:#f9fafb;--text:#111827;--muted:#626b7c;--line:#e3e7ef;--blue-light:#edf3ff;--radius:24px}
+    *{box-sizing:border-box} [hidden]{display:none!important}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+    button,input,select{font:inherit} button{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation} button:disabled{cursor:not-allowed}
+    button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #779ef8;outline-offset:4px}
+    a{color:var(--primary)} svg{vertical-align:middle} .icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .shell{max-width:1120px;margin:auto;padding:0 32px} header{height:96px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:11px;font-size:17px;font-weight:750;letter-spacing:-.5px}.brand-mark{width:38px;height:38px;display:grid;place-items:center;background:var(--primary);color:white;border-radius:12px}.brand-mark .icon{width:23px;height:23px}
+    .brand small{font-weight:400;color:var(--muted)}.research-label{font-size:11px;text-transform:uppercase;letter-spacing:1.7px;color:var(--muted);display:flex;align-items:center;gap:9px}.research-label:before{content:"";width:6px;height:6px;background:var(--success);border-radius:50%}
+    main{min-height:calc(100svh - 177px);padding:40px 0 48px}.screen{animation:enter .32s ease both}.screen:focus{outline:none}@keyframes enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+    .eyebrow{font-size:11px;font-weight:750;letter-spacing:2px;text-transform:uppercase;color:var(--primary);margin:0 0 18px;display:flex;align-items:center;gap:9px}.eyebrow:before{content:"";height:1px;width:24px;background:currentColor}
+    h1,h2,h3,p{margin-top:0} h1{font-size:clamp(40px,5vw,62px);line-height:1.12;letter-spacing:-2.6px;font-weight:750;margin-bottom:24px} h1 em{font-style:normal;color:var(--primary)} h2{font-size:32px;line-height:1.2;letter-spacing:-1.2px;margin-bottom:12px} h3{font-size:16px;margin-bottom:4px}.muted{color:var(--muted)}
+    .welcome-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center;padding:35px 0 45px}.intro{font-size:16px;color:var(--muted);max-width:400px;line-height:1.8;margin-bottom:25px}.facts{display:flex;gap:18px;margin:0 0 30px;color:#4b5563;font-size:12px}.facts span{display:flex;align-items:center;gap:6px}.facts .icon{width:17px;height:17px}
+    .btn{border:0;border-radius:12px;min-height:52px;padding:14px 22px;display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:650;transition:background .2s,transform .2s}.btn:hover:not(:disabled){transform:translateY(-1px)}.btn.primary{background:var(--primary);color:white;box-shadow:0 4px 10px #1a56db16}.btn.primary:hover:not(:disabled){background:var(--primary-dark)}.btn.primary:disabled{background:#cbd5e1;color:#536176;box-shadow:none}.btn.secondary{background:white;color:var(--text);border:1px solid var(--line)}.btn.wide{width:100%}.btn .icon{width:19px;height:19px}.under-cta{font-size:11px;color:var(--muted);margin:13px 0 0;display:flex;gap:6px;align-items:center}.under-cta .icon{width:14px;height:14px}
+    .voice-art{background:var(--blue-light);border:1px solid #dce6fa;min-height:374px;border-radius:28px;position:relative;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}.art-label{position:absolute;top:24px;left:26px;display:flex;align-items:center;gap:7px;color:#536a98;font-size:10px;letter-spacing:1.7px;font-weight:700}.art-label:before{content:"";width:6px;height:6px;background:var(--primary);border-radius:50%}.orbit{width:250px;height:250px;border:1px solid #cbd9f3;border-radius:50%;display:grid;place-items:center;position:relative}.orbit:before{content:"";width:190px;height:190px;border:1px dashed #bfd1f4;border-radius:50%;position:absolute}.voice-disc{background:white;width:134px;height:134px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;box-shadow:0 12px 35px #375d9d10;z-index:1}.voice-disc .sinhala{font-size:23px;color:var(--primary);font-weight:600}.voice-disc small{font-size:9px;letter-spacing:2px;color:#71809a;margin-top:6px}.art-wave{position:absolute;bottom:33px;height:38px;display:flex;gap:4px;align-items:center;color:#7fa1e9}.art-wave i{display:block;width:4px;height:var(--h);background:currentColor;border-radius:5px}.art-pill{position:absolute;padding:7px 12px;background:white;border:1px solid #e6ebf4;border-radius:20px;font-size:11px;box-shadow:0 4px 14px #1e3a5f08;z-index:2}.art-pill.one{top:101px;left:15px;transform:rotate(-8deg)}.art-pill.two{right:12px;bottom:108px;transform:rotate(6deg)}.art-pill span{color:var(--success);margin-right:5px}.art-foot{position:absolute;bottom:16px;font-size:9px;color:#64799d;letter-spacing:1.4px;text-transform:uppercase}
+    .overview{border-top:1px solid var(--line);padding-top:25px;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.overview-item{display:flex;align-items:flex-start;gap:13px}.step-num{width:29px;height:29px;background:#edf0f6;border-radius:9px;flex-shrink:0;display:grid;place-items:center;font-size:11px;font-weight:700;color:#69758b}.overview-item h3{font-size:13px}.overview-item p{font-size:12px;color:var(--muted);margin:3px 0 0}
+    footer{display:flex;justify-content:space-between;gap:16px;padding:23px 0;border-top:1px solid var(--line);color:#7b8493;font-size:11px}footer span:first-child{display:flex;gap:7px;align-items:center}footer .icon{width:15px;height:15px}
+    .flow-wrap{max-width:490px;margin:0 auto}.flow-heading{text-align:center;margin:4px 0 28px}.flow-heading .eyebrow{justify-content:center;margin-bottom:14px}.flow-heading p{font-size:14px;margin:0;color:var(--muted)}.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 5px 20px #1e293b03}.field{margin-bottom:19px}.field label,.field legend{font-size:12px;font-weight:650;display:block;margin-bottom:7px}.field input[type=text],.field select{width:100%;min-height:50px;border:1px solid #d8dee9;border-radius:10px;padding:11px 13px;background:#fff;color:var(--text);font-size:14px}.field input::placeholder{color:#949baa}.field select:invalid{color:#8a93a3}fieldset{border:0;padding:0;margin:0}.radios{display:flex;gap:8px;flex-wrap:wrap}.radio-label{position:relative;flex:1;margin:0!important;min-width:90px}.radio-label input{position:absolute;opacity:0}.radio-label span{display:flex;align-items:center;justify-content:center;min-height:48px;padding:8px;border:1px solid #d8dee9;border-radius:10px;font-size:12px;font-weight:400;white-space:nowrap}.radio-label input:checked+span{border-color:var(--primary);color:var(--primary);background:var(--blue-light);font-weight:600}.radio-label input:focus-visible+span{outline:3px solid #779ef8;outline-offset:3px}.consent{display:flex;gap:11px;align-items:flex-start;font-size:12px;color:#485367;cursor:pointer;min-height:48px;padding:8px 0}.consent input{width:19px;height:19px;flex-shrink:0;margin:0;accent-color:var(--primary)}.privacy-note{font-size:11px;line-height:1.7;color:var(--muted);margin:5px 0 19px}.form-footer{text-align:center;font-size:11px;color:var(--muted);margin:16px 0 0}
+    .note{font-size:12px;padding:13px 16px;border:1px solid #d5e3ff;border-radius:12px;background:#edf3ff;color:#254c96;margin-bottom:20px}.note.warning{background:#fff9e7;border-color:#f1dfb0;color:#795500}.error{background:#fff1f1;color:#a71d1d;border:1px solid #f7caca;padding:14px;border-radius:12px;font-size:13px;margin:16px 0}.error p{margin:0}.error .btn{margin-top:10px;min-height:48px;font-size:12px}.error ul{padding-left:18px;margin:8px 0}.status-line{font-size:12px;text-align:center;color:var(--muted);min-height:22px;margin-top:13px}
+    .instruction-list{list-style:none;padding:0;margin:0 0 25px}.instruction-list li{display:flex;gap:15px;margin-bottom:23px}.instruction-list li:last-child{margin-bottom:0}.instruction-icon{color:var(--primary);background:var(--blue-light);border-radius:12px;min-width:43px;height:43px;display:grid;place-items:center}.instruction-list p{font-size:12px;color:var(--muted);margin:3px 0 0}.instruction-list h3{font-size:14px}.session-summary{display:flex;justify-content:space-between;gap:8px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:22px;font-size:11px;color:var(--muted)}.session-summary strong{color:var(--text)}
+    .record-wrap{max-width:540px;margin:auto}.record-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;margin-bottom:12px}.record-top strong{font-size:13px}.speaker-badge{font-family:ui-monospace,monospace;color:#64748b;background:#edf0f5;padding:5px 9px;border-radius:6px;font-size:11px}.progress{height:5px;background:#e6eaf2;border-radius:10px;overflow:hidden;margin-bottom:24px}.progress-fill{background:var(--primary);height:100%;width:0;transition:width .3s}.record-card{text-align:center;padding:28px 25px 25px;position:relative}.session-type{font-size:10px;letter-spacing:2px;font-weight:650;color:#778195;text-transform:uppercase;margin-bottom:18px}.sinhala{font-family:"Noto Sans Sinhala",sans-serif}.word{font-size:64px;font-weight:600;line-height:1.7;letter-spacing:-1px;margin:0;color:var(--text)}.romanized{font-size:24px;font-weight:550;margin:0;letter-spacing:-.5px}.meaning{font-size:16px;color:var(--muted);margin:2px 0 22px}.rep-count{font-size:30px;letter-spacing:-1px;margin-bottom:9px;font-weight:650}.rep-count span{color:#8e97a7;font-size:20px;font-weight:400}.rep-dots{display:flex;gap:6px;justify-content:center;margin:0 0 18px}.rep-dots i{height:6px;width:18px;border-radius:8px;background:#e9edf5}.rep-dots i.complete{background:var(--success)}.rep-dots i.current{background:#99b5f3}.record-instruction{font-size:13px;color:#536078;min-height:40px;margin:0 auto;max-width:350px}.waveform{height:56px;display:flex;gap:4px;align-items:center;justify-content:center;margin:9px 0 16px}.waveform i{width:4px;height:5px;background:#c9d0dd;border-radius:8px;transition:height .07s}.waveform.active i{background:var(--success)}.record-button{width:88px;height:88px;border:7px solid #f1f3f8;border-radius:50%;background:#667085;color:white;display:inline-grid;place-items:center;box-shadow:0 0 0 1px #e4e8ee;transition:background .2s}.record-button .icon{width:28px;height:28px}.record-button.recording{background:var(--danger);border-color:#fde8e8;box-shadow:0 0 0 1px #f5bcbc;animation:pulse 1.5s infinite}.record-button.processing{background:var(--warning);border-color:#fff5d6;color:#553900}.record-button.done{background:var(--success);border-color:#ddf5eb}.record-button:disabled{opacity:1}.record-button.processing .icon{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{box-shadow:0 0 0 8px #e0242410}}.record-label{margin:14px 0 2px;font-size:13px;font-weight:650}.record-hint{margin:0;font-size:11px;color:#7c8596}.record-bottom{display:flex;justify-content:space-between;margin-top:17px;color:#7b8494;font-size:10px;letter-spacing:.2px}.record-bottom span{display:flex;align-items:center;gap:5px}.record-bottom .icon{width:13px;height:13px}
+    .between{text-align:center;padding:65px 0}.check-circle{display:grid;place-items:center;width:74px;height:74px;border-radius:50%;background:#e6f5ee;color:var(--success);margin:0 auto 25px}.check-circle .icon{width:34px;height:34px;stroke-width:2}.between .next-word{font-size:34px;color:var(--primary);margin-top:10px}.between p{color:var(--muted);font-size:14px}.complete-card{text-align:center;padding:37px 28px}.complete-card h2{font-size:30px}.complete-card .sinhala{font-size:33px;margin-bottom:8px;font-weight:600}.complete-copy{font-size:14px;color:var(--muted);max-width:340px;margin:0 auto 24px}.receipt{padding:18px;border:1px dashed #cfd8e8;border-radius:12px;background:var(--bg);margin:22px 0;text-align:left;display:flex;align-items:center;justify-content:space-between}.receipt small{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px}.receipt strong{font-family:ui-monospace,monospace;font-size:21px}.receipt .clip-total{text-align:right;color:var(--success);font-size:12px}.share-note{font-size:11px;color:var(--muted);margin:13px 0 0}.network-banner{margin:0 0 18px;display:flex;justify-content:space-between;gap:12px;align-items:center}.network-banner button{font-size:12px;min-height:48px;padding:8px 12px;flex-shrink:0}.lock-notice{max-width:490px;margin:30px auto}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:12px 20px;background:#17213b;color:white;border-radius:12px;font-size:13px;z-index:10;max-width:calc(100% - 32px);text-align:center}.mobile-break{display:none}
+    @media(max-width:760px){.shell{padding:0 24px}header{height:77px}.brand{font-size:15px}.brand-mark{width:33px;height:33px;border-radius:10px}.research-label{font-size:9px;letter-spacing:1px}.brand small{display:none}main{padding:28px 0 34px;min-height:calc(100svh - 146px)}.welcome-grid{grid-template-columns:1fr;gap:28px;padding:4px 0 28px}.welcome-copy{max-width:480px;margin:auto;width:100%}h1{font-size:44px;letter-spacing:-2px;margin-bottom:18px}.intro{font-size:14px;line-height:1.7;margin-bottom:20px}.facts{font-size:11px;gap:15px;margin-bottom:23px}.voice-art{min-height:242px;max-width:480px;width:100%;margin:auto;border-radius:20px}.orbit{width:172px;height:172px}.orbit:before{width:139px;height:139px}.voice-disc{width:107px;height:107px}.voice-disc .sinhala{font-size:19px}.voice-disc small{font-size:8px}.art-label{top:17px;left:19px;font-size:8px}.art-wave{bottom:24px;height:20px;gap:3px;transform:scaleY(.65)}.art-foot{font-size:7px;bottom:11px}.art-pill.one{top:71px;left:15px}.art-pill.two{bottom:73px;right:13px}.art-pill{font-size:9px;padding:6px 10px}.overview{gap:16px;padding-top:22px}.overview-item{flex-direction:column;gap:9px}.overview-item h3{font-size:11px}.overview-item p{font-size:10px;line-height:1.5}.step-num{width:25px;height:25px;font-size:10px}.eyebrow{font-size:9px;margin-bottom:15px;letter-spacing:1.7px}footer{font-size:9px;padding:21px 0;gap:8px}.card{padding:23px}.flow-heading{margin:2px 0 24px}h2{font-size:28px}.flow-heading p{font-size:13px}.record-card{padding:21px 17px}.word{font-size:56px}.record-instruction{font-size:12px}.record-bottom{font-size:9px}.flow-wrap{max-width:490px}.radio-label span{font-size:11px}.session-summary{font-size:10px}.complete-card{padding:30px 23px}.welcome-copy>.btn{width:100%}.under-cta{justify-content:center}.network-banner{font-size:11px}.meaning{margin-bottom:17px}.mobile-break{display:block}}
+    @media(max-width:360px){.shell{padding:0 17px}.research-label{display:none}.word{font-size:48px}.facts{gap:10px}.card{padding:20px 16px}.radios{gap:5px}.radio-label{min-width:75px}.radio-label span{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><defs>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M4 10v4m4-8v12m4-15v18m4-15v12m4-8v4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v12h14V9m-10 12v-8h6v8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4m14-1v2a3 3 0 0 1-3 3H3"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-loader" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3m-4 4 4-4 4 4M5 11v9h14v-9"/></symbol>
+  </defs></svg>
+  <div class="shell">
+    <header><div class="brand"><span class="brand-mark"><svg class="icon"><use href="#i-wave"/></svg></span>Sinhala <small>/</small> Voice</div><div class="research-label">A research initiative</div></header>
+    <main>
+      <div id="setup-note" class="note warning" hidden>Preview mode. Fill in <strong>.env</strong> and run <strong>supabase/setup.sql</strong> to enable collection.</div>
+      <div id="queue-banner" class="note warning network-banner" role="status" hidden><span id="queue-message"></span><button id="retry-uploads" class="btn secondary" type="button">Retry uploads</button></div>
+      <div id="lock-notice" class="note warning lock-notice" hidden>This session is open in another tab. Close that tab, then reload this page to continue safely.</div>
+
+      <section id="speaker" class="screen flow-wrap" tabindex="-1" aria-labelledby="speaker-title">
+        <div class="flow-heading"><p class="eyebrow">Your details</p><h2 id="speaker-title">Name and gender</h2><p>Enter your name, select your gender and give consent to continue.</p></div>
+        <div id="saved-session" class="note" hidden><p id="saved-session-text"></p><button id="resume-session" class="btn secondary wide" type="button">Resume saved session</button></div>
+        <form id="speaker-form" class="card">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="Enter your name" required></div>
+          <fieldset class="field"><legend>Gender</legend><div class="radios"><label class="radio-label"><input type="radio" name="gender" value="Male" required><span>Male</span></label><label class="radio-label"><input type="radio" name="gender" value="Female"><span>Female</span></label><label class="radio-label"><input type="radio" name="gender" value="Prefer not to say"><span>Prefer not to say</span></label></div></fieldset>
+          <label class="consent"><input id="consent" name="consent" type="checkbox" required><span>I agree my recordings are used for research only.</span></label><p class="privacy-note">Participation is voluntary. Recordings are stored under a speaker ID in a public audio bucket: anyone with a recording link can listen. Your name and other details are not publicly listed. Please avoid saying personal information.</p>
+          <div id="form-error" class="error" role="alert" hidden></div><button id="speaker-next" class="btn primary wide" type="submit" disabled>Next<svg class="icon"><use href="#i-arrow"/></svg></button>
+        </form><p class="form-footer">Your microphone is only used during the recording step.</p>
+      </section>
+
+      <section id="instructions" class="screen flow-wrap" hidden tabindex="-1" aria-labelledby="instructions-title">
+        <div class="flow-heading"><p class="eyebrow">Step 02 · Get comfortable</p><h2 id="instructions-title">A few things before we start.</h2><p>No perfect pronunciation needed. Just be yourself.</p></div>
+        <div class="card"><ul class="instruction-list"><li><span class="instruction-icon"><svg class="icon"><use href="#i-home"/></svg></span><div><h3>Find a quiet spot</h3><p>Keep the TV, music and other conversations low.</p></div></li><li><span class="instruction-icon"><svg class="icon"><use href="#i-phone"/></svg></span><div><h3>Hold your phone naturally</h3><p>Keep it near your mouth, as you would on a call.</p></div></li><li><span class="instruction-icon"><svg class="icon"><use href="#i-mic"/></svg></span><div><h3>Tap. Wait for the beep. Speak.</h3><p>Say the displayed word once. Recording stops automatically after 2 seconds.</p></div></li><li><span class="instruction-icon"><svg class="icon"><use href="#i-repeat"/></svg></span><div><h3>One word, ten separate takes</h3><p>Then 5 silent clips and 5 random Sinhala sentences. These last up to 3 seconds each.</p></div></li></ul><div class="session-summary"><span><strong>8</strong> short sessions</span><span><strong>70</strong> recordings</span><span><strong>~10</strong> minutes</span></div><div id="resume-note" class="note" hidden></div><div id="mic-error" class="error" role="alert" hidden></div><button id="begin-recording" class="btn primary wide" type="button">Start recording<svg class="icon"><use href="#i-mic"/></svg></button><p class="form-footer">Allow microphone access when your browser asks.</p></div>
+      </section>
+
+      <section id="recording" class="screen record-wrap" hidden tabindex="-1" aria-labelledby="word-sinhala">
+        <div class="record-top"><strong id="word-progress">Word 1 of 8</strong><span id="speaker-badge" class="speaker-badge"></span></div><div id="progress-bar" class="progress" role="progressbar" aria-label="Overall recording progress" aria-valuemin="0" aria-valuemax="70" aria-valuenow="0"><div id="progress-fill" class="progress-fill"></div></div>
+        <div class="card record-card"><div id="session-type" class="session-type">Keyword · 2 seconds</div><h2 id="word-sinhala" class="sinhala word" lang="si">එන්න</h2><p id="word-romanized" class="romanized">Enda</p><p id="word-meaning" class="meaning">Come</p><div id="rep-count" class="rep-count" aria-live="polite">1 <span>/ 10</span></div><div id="rep-dots" class="rep-dots" aria-hidden="true"></div><p id="record-instruction" class="record-instruction">Tap record and say the word once.</p><div id="waveform" class="waveform" aria-hidden="true"></div><button id="record-button" class="record-button" type="button" aria-label="Record this take"><svg class="icon"><use href="#i-mic"/></svg></button><p id="record-label" class="record-label" role="status">Tap to record</p><p id="record-hint" class="record-hint">Wait for the beep, then speak</p><div id="record-error" class="error" role="alert" hidden></div></div>
+        <div class="record-bottom"><span><svg class="icon"><use href="#i-shield"/></svg>Saved after every take</span><span id="total-progress">0 of 70 recorded</span></div>
+      </section>
+
+      <section id="between" class="screen flow-wrap between" hidden tabindex="-1" aria-labelledby="between-title"><div class="check-circle"><svg class="icon"><use href="#i-check"/></svg></div><p class="eyebrow" style="justify-content:center">One step closer</p><h2 id="between-title">Nicely done!</h2><p id="between-description">That word is complete. Take a breath.</p><p style="margin-top:28px;margin-bottom:4px">Up next</p><div id="next-word" class="sinhala next-word" lang="si"></div><p id="next-meaning"></p></section>
+
+      <section id="complete" class="screen flow-wrap" hidden tabindex="-1" aria-labelledby="complete-title"><div class="card complete-card"><div class="check-circle"><svg class="icon"><use href="#i-check"/></svg></div><p class="sinhala" lang="si">ස්තූතියි!</p><h2 id="complete-title">Your voice makes a difference.</h2><p id="complete-copy" class="complete-copy">Thank you for helping Sinhala voice research grow.</p><div class="receipt"><div><small>Your speaker ID</small><strong id="final-speaker-id"></strong></div><div class="clip-total"><svg class="icon"><use href="#i-check"/></svg><br><span id="final-count">70 recordings</span></div></div><p id="completion-status" class="note" role="status"></p><button id="share" class="btn primary wide" type="button"><svg class="icon"><use href="#i-share"/></svg>Invite another voice</button><p class="share-note">Share this project with a friend. Every voice matters.</p></div></section>
+      <section id="duplicate" class="screen flow-wrap" hidden tabindex="-1" aria-labelledby="duplicate-title"><div class="card complete-card"><div class="check-circle"><svg class="icon"><use href="#i-check"/></svg></div><h2 id="duplicate-title">Already submitted, thank you!</h2><p class="muted">There is already a participant with this name. If that was you, continue on your original browser to finish any remaining recordings.</p><p class="privacy-note">If someone else shares your name, contact the research team to distinguish your entry.</p></div></section>
+    </main>
+    <footer><span><svg class="icon"><use href="#i-wave"/></svg>Sinhala KWS Data Collector</span><span>Built for research. Powered by your voice.</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p style="padding:24px">Please enable JavaScript to use the voice recorder.</p></noscript>
+  <script>window.APP_CONFIG = {"url":"https://doketqtgczmgepyvomxd.supabase.co","key":"sb_publishable_Xv8NOSeE0DuCZLgg7G_eVw_kpSFJ69R"};</script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.js" defer></script>
+  <script id="kws-core">
+    // Pure dataset/audio helpers. Kept in this HTML so deployment is a single file.
+    const KWS = (() => {
+      const sessions = [
+        { key:'enda', sinhala:'එන්න', romanized:'Enda', meaning:'Come', count:10, seconds:2 },
+        { key:'yanna', sinhala:'යන්න', romanized:'Yanna', meaning:'Go', count:10, seconds:2 },
+        { key:'nawathinna', sinhala:'නවතින්න', romanized:'Nawathinna', meaning:'Stop', count:10, seconds:2 },
+        { key:'epa', sinhala:'එපා', romanized:'Epa', meaning:'No', count:10, seconds:2 },
+        { key:'oone', sinhala:'ඕනේ', romanized:'Oone', meaning:'Want', count:10, seconds:2 },
+        { key:'hodai', sinhala:'හොඳයි', romanized:'Hodai', meaning:'Good', count:10, seconds:2 },
+        { key:'silence', sinhala:'නිශ්ශබ්දතාව', romanized:'Silence', meaning:'Stay quiet · room sound only', count:5, seconds:3 },
+        { key:'bg', sinhala:'පසුබිම', romanized:'Background speech', meaning:'A random Sinhala sentence', count:5, seconds:3 }
+      ];
+      const total = sessions.reduce((sum, s) => sum + s.count, 0);
+      function position(completed) {
+        if (!Number.isInteger(completed) || completed < 0 || completed > total) throw new Error('Invalid recording progress.');
+        let remaining = completed;
+        for (let index = 0; index < sessions.length; index++) {
+          if (remaining < sessions[index].count) return { index, rep:remaining + 1, session:sessions[index] };
+          remaining -= sessions[index].count;
+        }
+        return null;
+      }
+      function filename(spkId, completed) {
+        if (!/^spk\d{3,}$/.test(spkId)) throw new Error('Invalid speaker ID.');
+        const p = position(completed);
+        if (!p) throw new Error('All recordings are complete.');
+        return `${spkId}/${spkId}_${p.session.key}_${String(p.rep).padStart(2,'0')}.wav`;
+      }
+      function wav(samples, sampleRate = 44100) {
+        const buffer = new ArrayBuffer(44 + samples.length * 2);
+        const view = new DataView(buffer);
+        const text = (offset, value) => { for (let i = 0; i < value.length; i++) view.setUint8(offset+i, value.charCodeAt(i)); };
+        text(0,'RIFF'); view.setUint32(4, 36+samples.length*2, true); text(8,'WAVE'); text(12,'fmt ');
+        view.setUint32(16,16,true); view.setUint16(20,1,true); view.setUint16(22,1,true);
+        view.setUint32(24,sampleRate,true); view.setUint32(28,sampleRate*2,true); view.setUint16(32,2,true); view.setUint16(34,16,true);
+        text(36,'data'); view.setUint32(40,samples.length*2,true);
+        for (let i=0;i<samples.length;i++) { const s=Math.max(-1,Math.min(1,samples[i])); view.setInt16(44+i*2,Math.round(s<0?s*0x8000:s*0x7fff),true); }
+        return new Blob([buffer], { type:'audio/wav' });
+      }
+      return { sessions, total, position, filename, wav };
+    })();
+  </script>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    const $ = id => document.getElementById(id);
+    const config = window.APP_CONFIG || { url:'', key:'' };
+    const configured = Boolean(config.url && config.key);
+    const sleep = ms => new Promise(resolve => setTimeout(resolve,ms));
+    const screens = ['speaker','instructions','recording','between','complete','duplicate'];
+    let db, session, client, stream, audio, analyser, source, recorder;
+    let mode='ready', recordStart=0, stopTimer, animation, interrupted=false, flushPromise, finishing=false, toastTimer;
+    let ready=false, registrationBusy=false, holdsLock=false;
+    const lockName = `sinhala-kws-${config.url || 'preview'}`;
+    $('setup-note').hidden = configured;
+    for (let i=0;i<32;i++) $('waveform').appendChild(document.createElement('i'));
+
+    function show(id) {
+      for (const screen of screens) $(screen).hidden = screen!==id;
+      $(id).focus({preventScroll:true}); window.scrollTo({top:0,behavior:'instant'});
+    }
+    function toast(message) { clearTimeout(toastTimer); $('toast').textContent=message; $('toast').hidden=false; toastTimer=setTimeout(()=>$('toast').hidden=true,4500); }
+    function error(id,message) { $(id).textContent=message; $(id).hidden=false; }
+    function clearError(id) { $(id).hidden=true; $(id).textContent=''; }
+    function timedFetch(input,init={}) {
+      const controller=new AbortController();
+      const cancel=()=>controller.abort();
+      if(init.signal?.aborted) cancel();
+      init.signal?.addEventListener('abort',cancel,{once:true});
+      const timer=setTimeout(cancel,20000);
+      return fetch(input,{...init,signal:controller.signal}).finally(()=>{clearTimeout(timer);init.signal?.removeEventListener('abort',cancel);});
+    }
+    function makeClient(token = session?.token) {
+      if (!configured) throw new Error('Collection is not configured yet. The researcher needs to fill .env and set up Supabase.');
+      if (!window.supabase) throw new Error('Could not load the connection library. Check your internet connection and reload.');
+      client=window.supabase.createClient(config.url,config.key,{auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false},global:{headers:{'x-speaker-token':token},fetch:timedFetch}});
+    }
+
+    // IndexedDB holds audio Blobs without localStorage's small base64 quota.
+    // A clip and its next progress checkpoint are committed in one transaction.
+    function openDB() {
+      return new Promise((resolve,reject)=>{
+        const request=indexedDB.open(`sinhala-kws-v1-${config.url || 'preview'}`,1);
+        request.onupgradeneeded=()=>{ const d=request.result; d.createObjectStore('session'); d.createObjectStore('clips',{keyPath:'path'}); };
+        request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);
+      });
+    }
+    function read(store,key) {
+      return new Promise((resolve,reject)=>{const tx=db.transaction(store);const request=key===undefined?tx.objectStore(store).getAll():tx.objectStore(store).get(key);request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});
+    }
+    function transaction(stores,write) {
+      return new Promise((resolve,reject)=>{const tx=db.transaction(stores,'readwrite');tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error || new Error('Local save interrupted.'));try{write(tx);}catch(e){tx.abort();reject(e);}});
+    }
+    async function saveSession(next) { await transaction(['session'],tx=>tx.objectStore('session').put(next,'active'));session=next; }
+    async function storeClip(blob) {
+      const next={...session,completed:session.completed+1};
+      const clip={path:KWS.filename(session.spkId,session.completed),blob,createdAt:Date.now()};
+      await transaction(['session','clips'],tx=>{tx.objectStore('clips').put(clip);tx.objectStore('session').put(next,'active');});
+      session=next;return clip;
+    }
+    async function queueUI() {
+      const clips=await read('clips');
+      $('queue-banner').hidden=clips.length===0 && (navigator.onLine || !session?.spkId);
+      $('queue-message').textContent=clips.length ? `${clips.length} recording${clips.length===1?'':'s'} saved on this device. ${navigator.onLine?'Waiting to upload.':'You are offline.'} Keep this browser’s data to retain them.` : 'You are offline. New recordings will be saved on this device.';
+      if (session?.completed===KWS.total) {
+        $('completion-status').textContent=session.finalized?'All 70 recordings uploaded. Your contribution is complete.':clips.length?`${clips.length} recording${clips.length===1?' is':'s are'} still on this device. Reopen this page online to finish uploading.`:'Recordings uploaded. Waiting for the server to confirm completion.';
+        $('completion-status').classList.toggle('warning',!session.finalized);
+      }
+    }
+    async function sameBlob(a,b) {
+      if(a.size!==b.size)return false;
+      const hash=async blob=>new Uint8Array(await crypto.subtle.digest('SHA-256',await blob.arrayBuffer()));
+      const [aa,bb]=await Promise.all([hash(a),hash(b)]);return aa.every((v,i)=>v===bb[i]);
+    }
+    async function uploadClip(clip) {
+      // One initial attempt + three retries; never overwrite an existing clip.
+      for(let attempt=0;attempt<4;attempt++) {
+        if(!navigator.onLine) return false;
+        try {
+          const {error:uploadError}=await client.storage.from('recordings').upload(clip.path,clip.blob,{contentType:'audio/wav',upsert:false});
+          if(uploadError) {
+            if(String(uploadError.statusCode)==='409' || /already exists|duplicate/i.test(uploadError.message)) {
+              const {data,error:downloadError}=await client.storage.from('recordings').download(clip.path);
+              if(downloadError || !await sameBlob(clip.blob,data)) throw new Error('The server has a different recording at this path.');
+            } else throw uploadError;
+          }
+          await transaction(['clips'],tx=>tx.objectStore('clips').delete(clip.path));
+          return true;
+        } catch(e) { if(attempt<3) await sleep(500*2**attempt); }
+      }
+      return false;
+    }
+    async function finalize() {
+      if(finishing || !client || !session?.spkId || session.completed!==KWS.total || session.finalized || !navigator.onLine) return;
+      if((await read('clips')).length) return;
+      finishing=true;
+      try { const {data,error:rpcError}=await client.rpc('complete_speaker',{p_token:session.token});if(rpcError)throw rpcError;if(data===true)await saveSession({...session,finalized:true}); }
+      catch(e) { /* Keep the checkpoint. Retry on reconnect, reload or Retry uploads. */ }
+      finally {finishing=false;await queueUI();}
+    }
+    function flush() {
+      if(flushPromise)return flushPromise;
+      if(registrationBusy)return Promise.resolve();
+      flushPromise=(async()=>{
+        if(!client || !navigator.onLine)return;
+        $('retry-uploads').disabled=true;
+        try { for(const clip of await read('clips')) {if(!await uploadClip(clip))break;} await finalize(); }
+        finally {await queueUI();$('retry-uploads').disabled=false;}
+      })().finally(()=>flushPromise=null);
+      return flushPromise;
+    }
+
+    function validateForm() { $('speaker-next').disabled=!ready || !holdsLock || registrationBusy || !$('speaker-form').checkValidity() || !$('name').value.trim(); }
+    $('speaker-form').addEventListener('input',validateForm);
+    $('speaker-form').addEventListener('change',validateForm);
+    $('speaker-form').addEventListener('submit',async event=>{
+      event.preventDefault(); if(registrationBusy || !ready || !holdsLock)return;
+      validateForm();if($('speaker-next').disabled)return;
+      registrationBusy=true;$('speaker-next').disabled=true;$('speaker-next').textContent='Saving your details…';clearError('form-error');
+      try {
+        // Keep any existing participant intact until a new registration succeeds.
+        if(flushPromise)await flushPromise;
+        if(session?.spkId && (await read('clips')).length)throw new Error('Your previous session has recordings waiting to upload. Resume that session and finish uploading before adding another participant.');
+        const registration=await read('session','registration') || (!session?.spkId && session) || {token:crypto.randomUUID(),spkId:null,completed:0,finalized:false};
+        await transaction(['session'],tx=>tx.objectStore('session').put(registration,'registration'));
+        makeClient(registration.token);
+        const values=new FormData($('speaker-form'));
+        const {data,error:rpcError}=await client.rpc('register_speaker',{p_name:String(values.get('name')).trim(),p_age_group:null,p_gender:values.get('gender'),p_district:null,p_consent:values.get('consent')==='on',p_token:registration.token});
+        if(rpcError?.code==='23502')throw new Error('The researcher needs to run supabase/migrations/002_name_gender_only.sql so age and district are no longer required.');
+        if(rpcError)throw new Error('Could not save your details. Check your connection and try again. The researcher may need to run the database setup.');
+        if(data?.duplicate)throw new Error('This name is already registered. If the saved session above is yours, use Resume saved session. Otherwise contact the research team.');
+        if(!/^spk\d{3,}$/.test(data?.spk_id || ''))throw new Error('The server returned an invalid speaker ID. Please try again.');
+        const next={...registration,spkId:data.spk_id};
+        await transaction(['session'],tx=>{
+          const records=tx.objectStore('session');
+          if(session?.spkId)records.put(session,`archive:${session.spkId}`);
+          records.put(next,'active');records.delete('registration');
+        });
+        session=next;makeClient();$('speaker-form').reset();$('resume-note').hidden=true;show('instructions');
+      } catch(e){if(session?.spkId)makeClient();else client=null;error('form-error',e.message);}
+      finally {registrationBusy=false;$('speaker-next').innerHTML='Next <svg class="icon"><use href="#i-arrow"/></svg>';validateForm();}
+    });
+
+    $('resume-session').addEventListener('click',()=>{
+      if(!ready || !holdsLock || registrationBusy || !session?.spkId)return;
+      if(session.completed===KWS.total){complete();return;}
+      $('resume-note').textContent=`Welcome back. ${session.completed} of 70 recordings are saved. You will continue with the next take.`;
+      $('resume-note').hidden=session.completed===0;
+      show('instructions');
+    });
+
+    async function ensureAudio() {
+      if(!window.isSecureContext || !navigator.mediaDevices?.getUserMedia)throw new Error('Microphone access needs HTTPS (or localhost). Open the hosted HTTPS link in Safari or Chrome.');
+      if(!window.MediaRecorder)throw new Error('This browser does not support recording. Open this page in a recent Safari or Chrome browser.');
+      const Audio=window.AudioContext || window.webkitAudioContext;
+      if(!audio || audio.state==='closed')audio=new Audio();
+      await audio.resume();
+      if(!stream || !stream.getAudioTracks().some(t=>t.readyState==='live')) {
+        stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:{ideal:1},sampleRate:{ideal:44100},echoCancellation:false,noiseSuppression:false,autoGainControl:false},video:false});
+        source=audio.createMediaStreamSource(stream);analyser=audio.createAnalyser();analyser.fftSize=128;source.connect(analyser);
+        stream.getAudioTracks()[0].addEventListener('ended',()=>{if(recorder?.state==='recording'){interrupted=true;recorder.stop();}});
+      }
+    }
+    function releaseMic() {clearTimeout(stopTimer);cancelAnimationFrame(animation);source?.disconnect();source=null;stream?.getTracks().forEach(t=>t.stop());stream=null;}
+    function micError(id,e) {
+      const denied=['NotAllowedError','PermissionDeniedError','SecurityError'].includes(e.name);
+      if(denied){error(id,'Microphone access is blocked. iPhone Safari: open the page menu → Website Settings → Microphone → Allow. Android Chrome: tap the site controls beside the address → Permissions → Microphone → Allow. Then tap Start recording or the record button to retry.');}
+      else if(e.name==='NotFoundError')error(id,'No microphone was found. Connect a microphone and tap the button to retry.');
+      else if(e.name==='NotReadableError')error(id,'Your microphone is busy. Close other apps using it and tap the button to retry.');
+      else error(id,e.message || 'Recording could not start. Please try again.');
+    }
+    $('begin-recording').addEventListener('click',async()=>{
+      $('begin-recording').disabled=true;clearError('mic-error');
+      try {await ensureAudio();if(document.hidden){releaseMic();throw new Error('Keep this page visible, then tap Start recording again.');}renderRecording();show('recording');}
+      catch(e){releaseMic();micError('mic-error',e);}
+      finally {$('begin-recording').disabled=false;}
+    });
+    function renderRecording() {
+      const p=KWS.position(session.completed);if(!p){complete();return;}
+      $('word-progress').textContent=`${p.index<6?'Word':'Session'} ${p.index+1} of 8`;
+      $('speaker-badge').textContent=session.spkId;$('word-sinhala').textContent=p.session.sinhala;
+      $('word-sinhala').style.fontSize=p.session.key==='silence'?'38px':'';
+      $('word-romanized').textContent=p.session.romanized;$('word-meaning').textContent=p.session.meaning;
+      $('session-type').textContent=`${p.index<6?'Keyword':p.index===6?'Room sound':'Background speech'} · ${p.session.seconds} seconds`;
+      $('rep-count').innerHTML=`${p.rep} <span>/ ${p.session.count}</span>`;
+      $('rep-dots').replaceChildren();for(let i=1;i<=p.session.count;i++){const dot=document.createElement('i');dot.className=i<p.rep?'complete':i===p.rep?'current':'';$('rep-dots').appendChild(dot);}
+      $('record-instruction').textContent=p.session.key==='silence'?'Tap record and stay silent for 3 seconds.':p.session.key==='bg'?'Say any random Sinhala sentence. Avoid all six keywords.':p.rep===1?'Tap record and say the word once.':p.rep===10?'Last one! Say it one more time.':'Tap record and say it again.';
+      $('total-progress').textContent=`${session.completed} of 70 recorded`;$('progress-fill').style.width=`${session.completed/KWS.total*100}%`;$('progress-bar').setAttribute('aria-valuenow',String(session.completed));setMode('ready');
+    }
+    function setMode(value) {
+      mode=value;const button=$('record-button');button.className=`record-button ${value}`;
+      const icons={ready:'mic',preparing:'loader',recording:'stop',processing:'loader',done:'check'};
+      button.innerHTML=`<svg class="icon"><use href="#i-${icons[value]}"/></svg>`;
+      if(value==='preparing')button.classList.add('processing');
+      button.disabled=!['ready','recording'].includes(value);button.setAttribute('aria-label',value==='recording'?'Stop recording':'Record this take');
+      $('record-label').textContent={ready:'Tap to record',preparing:'Get ready…',recording:'Recording…',processing:'Saving your recording…',done:'Saved!'}[value];
+      $('record-hint').textContent={ready:'Wait for the beep, then speak',preparing:'Speak after the beep',recording:'Tap to stop early',processing:'Keeping your take safe',done:'One more voice for Sinhala'}[value];
+      $('waveform').classList.toggle('active',value==='recording');
+    }
+    async function tone(frequencies,duration) {
+      if(!audio || audio.state!=='running')return;
+      const start=audio.currentTime;
+      for(const frequency of frequencies){const osc=audio.createOscillator(),gain=audio.createGain();osc.type='sine';osc.frequency.value=frequency;gain.gain.setValueAtTime(0,start);gain.gain.linearRampToValueAtTime(.07/frequencies.length,start+.01);gain.gain.setValueAtTime(.07/frequencies.length,start+duration-.02);gain.gain.linearRampToValueAtTime(0,start+duration);osc.connect(gain);gain.connect(audio.destination);osc.start(start);osc.stop(start+duration);osc.onended=()=>{osc.disconnect();gain.disconnect();};}
+      await sleep(duration*1000);
+    }
+    function animate() {
+      if(mode!=='recording')return;
+      const levels=new Uint8Array(analyser.frequencyBinCount);analyser.getByteFrequencyData(levels);
+      [...$('waveform').children].forEach((bar,i)=>bar.style.height=`${5+levels[i]*.16}px`);
+      const max=KWS.position(session.completed).session.seconds;
+      const elapsed=Math.min(max,(performance.now()-recordStart)/1000);
+      $('record-hint').textContent=`${elapsed.toFixed(1)} / ${max.toFixed(1)} seconds · tap to stop`;
+      animation=requestAnimationFrame(animate);
+    }
+    async function toWav(blob,maxSeconds) {
+      if(!blob.size)throw new Error('No audio was captured. Please record this take again.');
+      const decoded=await audio.decodeAudioData(await blob.arrayBuffer());
+      if(decoded.duration<.25)throw new Error('That recording was too short. Please try again.');
+      const Offline=window.OfflineAudioContext || window.webkitOfflineAudioContext;
+      const offline=new Offline(1,Math.floor(Math.min(decoded.duration,maxSeconds)*44100),44100);
+      const input=offline.createBufferSource();input.buffer=decoded;input.connect(offline.destination);input.start();
+      const result=await offline.startRendering();return KWS.wav(result.getChannelData(0));
+    }
+    async function captured(chunks,mime,position) {
+      clearTimeout(stopTimer);cancelAnimationFrame(animation);[...$('waveform').children].forEach(b=>b.style.height='5px');
+      setMode('processing');
+      try {
+        if(interrupted)throw new Error('Recording was interrupted. Keep this page open and record this take again.');
+        const blob=await toWav(new Blob(chunks,{type:mime}),position.session.seconds);
+        try {await storeClip(blob);}catch(e){throw new Error('Could not save on this device. Free some browser storage, then record this take again. Your counter has not advanced.');}
+        // Progress is durable even if the page closes during upload.
+        // Upload/status failures must not undo a successfully committed local take.
+        await queueUI().catch(()=>{});await flush().catch(()=>{});
+        setMode('done');tone([600,900],.3).catch(()=>{});await sleep(1000);
+        if(session.completed===KWS.total){await complete();return;}
+        const next=KWS.position(session.completed);
+        if(next.index!==position.index){$('record-label').textContent='Word complete!';await sleep(500);$('next-word').textContent=next.session.sinhala;$('next-meaning').textContent=next.session.meaning;$('between-description').textContent=position.index<6?'That word is complete. Take a breath.':'That session is complete. Take a breath.';show('between');await sleep(2000);}
+        renderRecording();show('recording');
+      } catch(e){setMode('ready');error('record-error',e.message || 'Could not process this recording. Please try again.');}
+    }
+    $('record-button').addEventListener('click',async()=>{
+      if(mode==='recording'){if(performance.now()-recordStart>=300 && recorder?.state==='recording')recorder.stop();return;}
+      if(mode!=='ready')return;
+      clearError('record-error');setMode('preparing');interrupted=false;
+      try {
+        await ensureAudio();await tone([1200],.2);
+        if(document.hidden)throw new Error('Keep this page visible while recording. Tap record to try again.');
+        const p=KWS.position(session.completed);
+        const mime=['audio/webm;codecs=opus','audio/mp4','audio/webm','audio/ogg;codecs=opus'].find(type=>MediaRecorder.isTypeSupported(type));
+        const chunks=[];recorder=new MediaRecorder(stream,mime?{mimeType:mime}:{});
+        recorder.ondataavailable=event=>{if(event.data.size)chunks.push(event.data);};
+        recorder.onerror=()=>{interrupted=true;};
+        recorder.onstop=()=>captured(chunks,recorder.mimeType,p);
+        recorder.start();recordStart=performance.now();setMode('recording');animate();
+        stopTimer=setTimeout(()=>{if(recorder.state==='recording')recorder.stop();},p.session.seconds*1000);
+      } catch(e){releaseMic();setMode('ready');micError('record-error',e);}
+    });
+    async function complete() {
+      releaseMic();if(audio?.state==='running')audio.suspend().catch(()=>{});
+      $('final-speaker-id').textContent=session.spkId;show('complete');await queueUI().catch(()=>{});flush().catch(()=>{});
+    }
+    $('share').addEventListener('click',async()=>{
+      const url=new URL(location.href);url.search='';url.hash='';
+      try {if(navigator.share)await navigator.share({title:'Sinhala Voice Research',text:'Lend your voice to Sinhala keyword research. It takes about 10 minutes.',url:url.href});else{await navigator.clipboard.writeText(url.href);toast('Project link copied. Share it with a friend!');}}
+      catch(e){if(e.name!=='AbortError')toast(`Share this link: ${url.href}`);}
+    });
+    $('retry-uploads').addEventListener('click',()=>{flush().catch(()=>toast('Could not retry. Please keep this page open and try again.'));});
+    window.addEventListener('online',()=>{if(ready && holdsLock)flush().catch(()=>{});});
+    window.addEventListener('offline',()=>{if(ready && holdsLock)queueUI().catch(()=>{});});
+    document.addEventListener('visibilitychange',()=>{
+      if(document.hidden){if(recorder?.state==='recording'){interrupted=true;recorder.stop();}releaseMic();}
+      else if(ready && holdsLock)flush().catch(()=>{});
+    });
+    window.addEventListener('pagehide',releaseMic);
+
+    async function init() {
+      try {
+        db=await openDB();session=await read('session','active');
+        if(session){KWS.position(session.completed);if(!/^[0-9a-f-]{36}$/i.test(session.token))throw new Error('Invalid saved session. Contact the researcher before clearing browser data.');}
+        if(session?.spkId){makeClient();flush().catch(()=>{});}
+        ready=true;
+        await queueUI();
+        // Always show the form. Resuming a saved participant is an explicit choice.
+        if(session?.spkId){
+          $('saved-session').hidden=false;
+          $('saved-session-text').textContent=`Saved session: ${session.spkId} (${session.completed}/70 recordings). Resume it, or fill in the form for a different participant.`;
+          $('resume-session').textContent=session.completed===KWS.total?'View saved contribution':'Resume saved session';
+        }
+        show('speaker');
+        validateForm();
+      } catch(e){ready=false;validateForm();$('setup-note').hidden=false;$('setup-note').textContent=e.message || 'Browser storage is unavailable. Use a normal Safari or Chrome tab and allow site storage.';}
+    }
+    // Web Locks prevents two tabs from racing on the same repetition/checkpoint.
+    if(navigator.locks){navigator.locks.request(lockName,{ifAvailable:true},async lock=>{if(!lock){$('lock-notice').hidden=false;validateForm();return;}holdsLock=true;await init();await new Promise(()=>{});}).catch(()=>{ready=false;holdsLock=false;$('lock-notice').hidden=false;validateForm();});}
+    else {$('setup-note').hidden=false;$('setup-note').textContent='Please use a recent Safari or Chrome browser over HTTPS. This browser cannot safely resume recording sessions.';validateForm();}
+  });
+  </script>
+</body>
+</html>
